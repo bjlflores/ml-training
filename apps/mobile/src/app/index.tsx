@@ -10,7 +10,7 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { enableFreeze } from 'react-native-screens';
 import 'react-native-url-polyfill/auto';
 
-import { StorageManager } from '../components';
+// import { StorageManager } from '../components';
 import ApplicationRoutes from '../routes';
 import { tw } from '../tailwind';
 
@@ -40,9 +40,9 @@ function Application(): JSX.Element {
     <GestureHandlerRootView style={tw`flex-1`}>
       <SafeAreaProvider>
         <PersistQueryClientProvider client={queryClient} persistOptions={persistOptions}>
-          <StorageManager>
+          {/*<StorageManager>*/}
             <ApplicationRoutes />
-          </StorageManager>
+          {/*</StorageManager>*/}
         </PersistQueryClientProvider>
       </SafeAreaProvider>
     </GestureHandlerRootView>

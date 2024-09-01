@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 
-import { useLocalStorageState } from '../../../stores';
+// import { useLocalStorageState } from '../../../stores';
 
 type Props = {
   children: ReactNode;
@@ -8,11 +8,11 @@ type Props = {
 
 export function StorageManager(props: Props) {
   const { children } = props;
-  const hasHydrated = useLocalStorageState((state) => state._hasHydrated);
-
-  if (!hasHydrated) {
-    return null;
-  }
+  // const hasHydrated = useLocalStorageState((state) => state._hasHydrated);
+  //
+  // if (!hasHydrated) {
+  //   return null;
+  // }
 
   return children;
 }

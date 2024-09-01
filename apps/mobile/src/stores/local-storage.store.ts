@@ -1,7 +1,11 @@
 import { StateCreator, create } from 'zustand';
-import { PersistOptions, createJSONStorage, persist } from 'zustand/middleware';
+import {
+  PersistOptions,
+  // createJSONStorage,
+  persist,
+} from 'zustand/middleware';
 
-import { MmkvStorage } from './mmkvStorage';
+// import { MmkvStorage } from './mmkvStorage';
 
 const initialState = {
   _hasHydrated: false,
@@ -54,7 +58,7 @@ export const useLocalStorageState = create<LocalStorageState, []>(
       onRehydrateStorage: () => (state) => {
         state?.setHasHydrated(true);
       },
-      storage: createJSONStorage(() => MmkvStorage),
+      // storage: createJSONStorage(() => MmkvStorage),
     },
   ),
 );
